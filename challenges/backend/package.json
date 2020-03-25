@@ -15,7 +15,11 @@
     "inversify": "^4.13.0",
     "mocha": "^5.2.0",
     "reflect-metadata": "^0.1.13",
+    "request-promise": "^4.2.5",
     "ts-node": "^8.1.0",
     "typescript": "^3.4.5"
+  },
+  "devDependencies": {
+    "@types/request-promise": "^4.1.46"
   }
 }
