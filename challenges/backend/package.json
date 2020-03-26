@@ -6,23 +6,28 @@
   "scripts": {
     "build": "tsc",
     "start": "./node_modules/.bin/ts-node src/app/main.ts",
-    "test": "./node_modules/.bin/mocha --compilers ts:ts-node/register ./src/**/*.spec.ts"
+    "test": "./node_modules/.bin/mocha --timeout 10000 --compilers ts:ts-node/register ./src/**/*.spec.ts"
   },
   "author": "Pravin Thakur",
   "license": "ISC",
   "dependencies": {
     "@types/inversify": "^2.0.33",
+    "@types/node": "^12.12.31",
     "inversify": "^4.13.0",
-    "mocha": "^5.2.0",
+    "js-sha512": "^0.8.0",
     "reflect-metadata": "^0.1.13",
     "request": "^2.88.2",
     "request-promise": "^4.2.5",
-    "sha512": "0.0.1",
-    "ts-node": "^8.1.0",
-    "typescript": "^3.4.5"
+    "ts-node": "^8.1.0"
   },
   "devDependencies": {
-    "@types/node": "^12.12.31",
-    "@types/request-promise": "^4.1.46"
+    "@types/mocha": "^7.0.2",
+    "@types/request-promise": "^4.1.46",
+    "bluebird": "^3.7.2",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "sandbox": "^0.8.6",
+    "sinon": "^9.0.1",
+    "typescript": "^3.8.3"
   }
 }

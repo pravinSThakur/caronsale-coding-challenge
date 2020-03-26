@@ -4,6 +4,7 @@
 
 import { ICarOnSaleClient } from '../interface/ICarOnSaleClient'
 import { IAuthService } from '../../AuthService/interfaces/IAuthService'
+import { AuthService } from '../../AuthService/classes/AuthService'
 import { injectable, inject } from "inversify"
 import { DependencyIdentifier } from '../../../DependencyIdentifiers'
 import { IAuction } from '../interface/IAuction'
@@ -13,9 +14,10 @@ import { constants } from '../../../common/constants'
 import "reflect-metadata";
 
 @injectable()
-export class CarOnSaleClient implements  ICarOnSaleClient{
-    @inject(DependencyIdentifier.AUTH_SERVICE) private authService: IAuthService;
+export class CarOnSaleClient implements ICarOnSaleClient{
+    private authService: IAuthService
     public constructor() {
+        this.authService = new AuthService();
     }
     //Use authService to implement authentication functionality 
     //Use REST client to get the list of all the auction for given user - Use API /v2/auction/buyer/ to get running auction for authenticated user
@@ -38,12 +40,11 @@ export class CarOnSaleClient implements  ICarOnSaleClient{
             "authtoken": token.token
         }
         const options = {
-            method: 'GET',
             uri: constants.CAR_ON_SALE_SERVER_BASE_URL + constants.AUCTION_BUYER_API_PATH,
-            header: httpHeaders,
+            headers: httpHeaders,
             json: true
         };
         const response: any =  await requestPromise.get(options);
-        return response.data.items;
+        return response.items;
     }
 }
