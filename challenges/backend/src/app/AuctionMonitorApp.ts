@@ -25,11 +25,18 @@ export class AuctionMonitorApp {
         //exit -1 on error
         try{
             const usersRunningAuctions: IAuction[] = await this.carOnSaleClient.getRunningAuctions();
-            //const auctionStats: object = generateAuctionStats(usersRunningAuctions);
+            const auctionStats: any = generateAuctionStats(usersRunningAuctions);
+            this.logResult(auctionStats);
             process.exit(0);
         }catch(err){
             this.logger.log("Got error while retrieving users running auctions: " + err);
             process.exit(-1);
         }
+    }
+
+    private logResult(auctionStats: any){
+        this.logger.log("Number of auctions = " + auctionStats.numAuctions);
+        this.logger.log("Average number of bids on an auction = " + auctionStats.avgNumBids);
+        this.logger.log("Average percentage of the auction progress = " + auctionStats.avgPercentageAuctionProgress);
     }
 }
