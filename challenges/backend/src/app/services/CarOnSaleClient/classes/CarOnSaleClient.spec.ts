@@ -42,5 +42,6 @@ describe("Happy path ---", function(){
         const runningAuctions: IAuction[] = await carOnSaleClient.getRunningAuctions();
 
         console.log("Got running auctions:" + JSON.stringify(runningAuctions));
+        expect(JSON.stringify(runningAuctions) == JSON.stringify(GetRunningAcutionsOutput))
     });
 })

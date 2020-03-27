@@ -1,0 +1,57 @@
+[
+    {
+      "numBids": 1,
+      "minimumRequiredAsk": 1000,
+      "currentHighestBidValue": 200
+    },
+    {
+      "numBids": 0,
+      "minimumRequiredAsk": 100000000,
+      "currentHighestBidValue": 10000
+    },
+    {
+      "numBids": 0,
+      "minimumRequiredAsk": 1000,
+      "currentHighestBidValue": 0
+    },
+    {
+      "numBids": 0,
+      "minimumRequiredAsk": 1000,
+      "currentHighestBidValue": 0
+    },
+    {
+      "numBids": 0,
+      "minimumRequiredAsk": 1900,
+      "currentHighestBidValue": 0
+    },
+    {
+      "numBids": 0,
+      "minimumRequiredAsk": 1000,
+      "currentHighestBidValue": 0
+    },
+    {
+      "numBids": 0,
+      "minimumRequiredAsk": 1000,
+      "currentHighestBidValue": 0
+    },
+    {
+      "numBids": 0,
+      "minimumRequiredAsk": 1000,
+      "currentHighestBidValue": 0
+    },
+    {
+      "numBids": 0,
+      "minimumRequiredAsk": 5500,
+      "currentHighestBidValue": 2500
+    },
+    {
+      "numBids": 0,
+      "minimumRequiredAsk": 12000,
+      "currentHighestBidValue": 5400
+    },
+    {
+      "numBids": 0,
+      "minimumRequiredAsk": 1000,
+      "currentHighestBidValue": 0
+    }
+  ]
